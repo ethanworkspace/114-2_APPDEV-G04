@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/marketListFragment">
+
+    <fragment
+        android:id="@+id/marketListFragment"
+        android:name="com.fishmarket.app.ui.market.MarketListFragment"
+        android:label="市場列表"
+        tools:layout="@layout/fragment_market_list">
+        <action
+            android:id="@+id/action_marketList_to_fishList"
+            app:destination="@id/fishListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recordsFragment"
+        android:name="com.fishmarket.app.ui.records.PurchaseRecordFragment"
+        android:label="紀錄"
+        tools:layout="@layout/fragment_purchase_record" />
+
+    <fragment
+        android:id="@+id/recipesFragment"
+        android:name="com.fishmarket.app.ui.recipe.RecipeFragment"
+        android:label="食譜"
+        tools:layout="@layout/fragment_recipe" />
+
+    <fragment
+        android:id="@+id/fishListFragment"
+        android:name="com.fishmarket.app.ui.fish.FishListFragment"
+        android:label="魚種列表"
+        tools:layout="@layout/fragment_fish_list">
+        <argument
+            android:name="marketName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fishList_to_fishDetail"
+            app:destination="@id/fishDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fishDetailFragment"
+        android:name="com.fishmarket.app.ui.detail.FishDetailFragment"
+        android:label="詳細資訊"
+        tools:layout="@layout/fragment_fish_detail">
+        <argument
+            android:name="marketName"
+            app:argType="string" />
+        <argument
+            android:name="fishName"
+            app:argType="string" />
+        <argument
+            android:name="productCode"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_fishDetail_to_recipes"
+            app:destination="@id/recipesFragment"
+            app:popUpTo="@id/marketListFragment"
+            app:popUpToSaveState="true"
+            app:restoreState="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.fishmarket.app.ui.favorites.FavoritesFragment"
+        android:label="我的收藏"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favorites_to_fishList"
+            app:destination="@id/fishListFragment" />
+        <action
+            android:id="@+id/action_favorites_to_fishDetail"
+            app:destination="@id/fishDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.fishmarket.app.ui.map.MapFragment"
+        android:label="漁市地圖"
+        tools:layout="@layout/fragment_map">
+        <action
+            android:id="@+id/action_map_to_fishList"
+            app:destination="@id/fishListFragment" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">漁市行情</string>
+    <string name="tab_market">市場</string>
+    <string name="tab_favorites">收藏</string>
+    <string name="tab_map">地圖</string>
+    <string name="search_market">搜尋市場...</string>
+    <string name="search_fish">搜尋魚種...</string>
+    <string name="no_data">暫無資料</string>
+    <string name="no_favorites">尚無收藏項目</string>
+    <string name="loading">載入中...</string>
+    <string name="today_price">今日價格</string>
+    <string name="avg_price">平均價</string>
+    <string name="high_price">上價</string>
+    <string name="mid_price">中價</string>
+    <string name="low_price">下價</string>
+    <string name="volume">交易量</string>
+    <string name="price_trend">價格走勢</string>
+    <string name="days_7">7天</string>
+    <string name="days_30">30天</string>
+    <string name="days_90">90天</string>
+    <string name="open_status">營業中</string>
+    <string name="closed_status">今日休市</string>
+    <string name="unit_kg">元/公斤</string>
+    <string name="fav_markets">收藏市場</string>
+    <string name="fav_fish">收藏魚種</string>
+</resources>
